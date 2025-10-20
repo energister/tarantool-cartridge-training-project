@@ -1,0 +1,12 @@
+@baseUrl = http://localhost:8081
+
+### Get weather in London
+GET {{baseUrl}}/weather?place=London
+Accept: application/json
+
+### Apply custom config
+PUT {{baseUrl}}/admin/config
+
+custom_config:
+    open_meteo_api:
+        request_timeout_in_seconds: 15

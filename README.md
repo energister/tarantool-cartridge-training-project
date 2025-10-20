@@ -75,6 +75,16 @@ cartridge stop  # to prevent "address already in use" error
 .rocks/bin/luatest -v
 ```
 
+### Load tests
+
+Load tests are implemented using the [k6](https://grafana.com/oss/k6/) framework by Grafana.  
+To install k6, follow the instructions in the [official documentation](https://grafana.com/docs/k6/latest/set-up/install-k6/).
+
+Start the test:
+```bash
+k6 run test/k6-test.js
+```
+
 ## Admin
 
 Application has admin function [`probe`](./app/admin.lua) configured.
